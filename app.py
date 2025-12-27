@@ -459,7 +459,6 @@ def load_model():
             model=model,
             tokenizer=tokenizer,
             return_all_scores=True
-             truncation=True
         )
         
         return classifier
@@ -767,3 +766,4 @@ def main():
 if __name__ == "__main__":
 
     main()
+
