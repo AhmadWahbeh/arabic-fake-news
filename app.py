@@ -7,7 +7,7 @@ from datetime import datetime
 # CONFIGURATION
 # ==============================================
 CONFIDENCE_THRESHOLD = 0.8
-MODEL_PATH = "./arabert_best_model"
+MODEL_PATH = "AhmadDS04/arabert-fake-news"
 
 st.set_page_config(
     page_title="Arabic Fake News Detection System",
@@ -459,6 +459,7 @@ def load_model():
             model=model,
             tokenizer=tokenizer,
             return_all_scores=True
+             truncation=True
         )
         
         return classifier
@@ -764,4 +765,5 @@ def main():
 # APPLICATION ENTRY POINT
 # ==============================================
 if __name__ == "__main__":
+
     main()
