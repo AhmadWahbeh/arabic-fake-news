@@ -620,6 +620,7 @@ def main():
                     outputs = classifier(news_text)[0]
                     
                     # Extract probabilities
+                    scores = {item["label"]: item["score"] for item in outputs}
                     prob_real = scores.get("Real", 0)
                     prob_fake = scores.get("Fake", 0)
                     confidence = max(prob_real, prob_fake)
@@ -766,5 +767,6 @@ def main():
 if __name__ == "__main__":
 
     main()
+
 
 
